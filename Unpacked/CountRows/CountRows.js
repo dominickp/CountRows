@@ -1,5 +1,3 @@
-// Is invoked each time a new job arrives in one of the input folders for the flow element.
-// The newly arrived job is passed as the second parameter.
 function jobArrived( s : Switch, job : Job )
 {
 	
@@ -27,10 +25,4 @@ function jobArrived( s : Switch, job : Job )
 	// Send job to next flow element
 	job.sendToSingle( job.getPath() );
 	
-}
-
-// Is invoked at regular intervals regardless of whether a new job arrived or not.
-// The interval can be modified with s.setTimerInterval().
-function timerFired( s : Switch )
-{
 }
